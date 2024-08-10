@@ -23,3 +23,4 @@ DETECTION_MODEL_DIR = ROOT / 'weights' / "best.pt"
 
 OBJECT_COUNTER = None
 OBJECT_COUNTER1 = None
+
