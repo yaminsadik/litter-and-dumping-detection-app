@@ -18,7 +18,7 @@ ROOT = root_path.relative_to(Path.cwd())
 SOURCES_LIST = ["Image", "Video", "Webcam"]
 
 # DL model config
-DETECTION_MODEL_DIR = ROOT / 'weights' / "best.pt"
+DETECTION_MODEL_DIR = ROOT / 'weights' / "yolov8m.pt"
 
 
 OBJECT_COUNTER = None
