@@ -1,0 +1,89 @@
+# =============================================================================
+# EcoWatch — .gitignore
+# Python + Machine Learning + Streamlit project
+# =============================================================================
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyo
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.env
+.conda/
+conda-env/
+
+# ── Jupyter Notebooks ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── YOLOv8 / Ultralytics training outputs ────────────────────────────────────
+# Training run artefacts (weights, plots, metrics) live here by default.
+runs/
+
+# ── Model weights ─────────────────────────────────────────────────────────────
+# Exclude all weight files by default — they are large binary files that
+# should be distributed via a model registry (e.g., Hugging Face Hub, DVC).
+# If you want to commit the default weights file, add a negation rule below.
+weights/*.pt
+# To track the default weights file:
+# !weights/yolov8m.pt
+
+# ── Dataset files ─────────────────────────────────────────────────────────────
+# Raw and processed datasets should not be committed. Use DVC or a storage
+# bucket and reference them via a dataset YAML or dvc.yaml.
+datasets/
+data/raw/
+data/processed/
+*.csv
+*.json
+!config*.json
+
+# ── Images, videos, and media ─────────────────────────────────────────────────
+# Avoid accidentally committing large media files uploaded during testing.
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.webp
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ── Streamlit ─────────────────────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── OS / Editor artefacts ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# ── Testing & coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# ── Temporary files ───────────────────────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.bak
